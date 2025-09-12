@@ -1,0 +1,9 @@
+.projects{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{position:relative;overflow:hidden}
+.card:hover{border-color: color-mix(in oklab, var(--accent) 35%, var(--border)); box-shadow: var(--ring), var(--shadow)}
+.title{margin:0}
+.blurb{color:var(--muted);margin-top:6px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 38px}
+.tag{font-size:12px;color:var(--muted);border:1px solid var(--border);padding:4px 8px;border-radius:999px; position:relative; padding-left:18px}
+.tag::before{ content:""; width:6px; height:6px; border-radius:50%; background: var(--accent); position:absolute; left:8px; top:50%; transform: translateY(-50%)}
+.go{position:absolute;right:12px;bottom:12px}

@@ -1,0 +1,4 @@
+.muted{margin:0 0 10px;color:var(--muted)}
+.small{margin-top:12px}
+.tel{color:var(--accent);text-decoration:none}
+.tel:hover{text-decoration:underline}
