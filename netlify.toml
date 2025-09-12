@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  # Angular's default output path is dist/<project-name>
+  publish = "dist/my-portfolio"
+
+[[redirects]]
+  # SPA fallback so deep links route to Angular
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
