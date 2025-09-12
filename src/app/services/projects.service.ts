@@ -8,7 +8,7 @@ export class ProjectsService {
       title: 'OmniPlay — Multi-Platform Music Player',
       blurb: 'Aggregated playback with platform adapters, OAuth sign-in, and playlist coordination.',
       tech: ['Angular', 'TypeScript', 'Signals', 'YouTube API', 'Spotify API'],
-      liveUrl: 'https://your-live-omniplay-demo.example.com'
+      liveUrl: 'https://omniplay.netlify.app'
     },
     {
       title: 'Future Project — Coming Soon',

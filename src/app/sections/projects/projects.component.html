@@ -7,11 +7,10 @@
       <div class="tags">
         <span class="tag" *ngFor="let t of p.tech">{{ t }}</span>
       </div>
-      <div class="go">
+      <div class="go" *ngIf="p.title !== 'Future Project — Coming Soon'">
         <a class="btn" [href]="p.liveUrl" target="_blank" rel="noopener noreferrer"
            aria-label="Open {{p.title}} live site">Open Live</a>
       </div>
     </article>
   </div>
 </section>
-
