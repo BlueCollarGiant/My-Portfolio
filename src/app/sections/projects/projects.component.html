@@ -1,16 +1,24 @@
 <section id="projects" class="container">
   <h2 class="section-title">Featured Projects</h2>
   <div class="grid projects">
-    <article class="card" *ngFor="let p of projectsSvc.projects()">
-      <h3 class="title">{{ p.title }}</h3>
-      <p class="blurb">{{ p.blurb }}</p>
-      <div class="tags">
-        <span class="tag" *ngFor="let t of p.tech">{{ t }}</span>
-      </div>
-      <div class="go" *ngIf="p.title !== 'Future Project — Coming Soon'">
-        <a class="btn" [href]="p.liveUrl" target="_blank" rel="noopener noreferrer"
-           aria-label="Open {{p.title}} live site">Open Live</a>
-      </div>
-    </article>
+    @for (p of projectsSvc.projects(); track p.title) {
+      <article class="card">
+        <h3 class="title">{{ p.title }}</h3>
+        <p class="blurb">{{ p.blurb }}</p>
+        <div class="tags">
+          @for (t of p.tech; track t) {
+            <span class="tag">{{ t }}</span>
+          }
+        </div>
+        @if (p.title !== 'Future Project — Coming Soon') {
+          <div class="go">
+            <a class="btn" [href]="p.repoUrl || p.liveUrl" target="_blank" rel="noopener noreferrer"
+               aria-label="{{ p.repoUrl ? 'Open ' + p.title + ' repository' : 'Open ' + p.title + ' live site' }}">
+              {{ p.repoUrl ? 'View Repo' : 'Open Live' }}
+            </a>
+          </div>
+        }
+      </article>
+    }
   </div>
 </section>

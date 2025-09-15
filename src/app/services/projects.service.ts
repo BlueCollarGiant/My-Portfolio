@@ -17,10 +17,11 @@ export class ProjectsService {
       liveUrl: 'https://example.com'
     },
     {
-      title: 'Sprinkle Sprite — Team CRUD App',
-      blurb: '8-bit styled ice-cream shop with Angular signals and forms.',
-      tech: ['Angular 19+', 'Signals', 'Forms'],
-      liveUrl: 'https://your-live-sprinkle-sprite.example.com'
+      title: 'Sprinkle Sprite — Team Project',
+      blurb: '8-bit styled ice-cream shop built collaboratively. This card links to the team GitHub repository.',
+      tech: ['Angular 20', 'Signals', 'Forms'],
+      liveUrl: 'https://github.com/CodeLabs-Students/CL-Group-C',
+      repoUrl: 'https://github.com/CodeLabs-Students/CL-Group-C/tree/main'
     }
   ]);
 
