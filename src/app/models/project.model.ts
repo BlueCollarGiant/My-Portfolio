@@ -2,7 +2,7 @@ export interface Project {
   title: string;
   blurb: string;
   tech: string[];
-  liveUrl: string;
+  liveUrl?: string;
   repoUrl?: string;
 }
 
