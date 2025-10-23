@@ -12,10 +12,26 @@
         </div>
         @if (p.title !== 'Future Project — Coming Soon') {
           <div class="go">
-            <a class="btn" [href]="p.repoUrl || p.liveUrl" target="_blank" rel="noopener noreferrer"
-               aria-label="{{ p.repoUrl ? 'Open ' + p.title + ' repository' : 'Open ' + p.title + ' live site' }}">
-              {{ p.repoUrl ? 'View Repo' : 'Open Live' }}
-            </a>
+            @if (p.liveUrl && p.repoUrl) {
+              <a class="btn" [href]="p.liveUrl" target="_blank" rel="noopener noreferrer"
+                 aria-label="Open {{ p.title }} live site">
+                Open Live
+              </a>
+              <a class="btn" [href]="p.repoUrl" target="_blank" rel="noopener noreferrer"
+                 aria-label="Open {{ p.title }} repository">
+                View Repo
+              </a>
+            } @else if (p.liveUrl) {
+              <a class="btn" [href]="p.liveUrl" target="_blank" rel="noopener noreferrer"
+                 aria-label="Open {{ p.title }} live site">
+                Open Live
+              </a>
+            } @else if (p.repoUrl) {
+              <a class="btn" [href]="p.repoUrl" target="_blank" rel="noopener noreferrer"
+                 aria-label="Open {{ p.title }} repository">
+                View Repo
+              </a>
+            }
           </div>
         }
       </article>

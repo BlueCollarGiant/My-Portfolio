@@ -13,7 +13,7 @@
   border:1px solid var(--border);
   border-radius: var(--radius); padding:28px; box-shadow: var(--shadow);
 }
-.headline{font-size:clamp(28px, 4vw, 46px);line-height:1.05;margin:0;
+.headline{font-size:clamp(28px, 4vw, 46px);line-height:1.05;margin:12px 0 0 0;
   background: linear-gradient(90deg, var(--text) 0%, color-mix(in oklab, var(--accent) 30%, var(--text)) 50%, var(--text) 100%);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent }
 .sub{color:var(--muted);max-width:65ch}
