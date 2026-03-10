@@ -1,4 +1,5 @@
-.muted{margin:0 0 10px;color:var(--muted)}
-.small{margin-top:12px}
-.tel{color:var(--accent);text-decoration:none}
-.tel:hover{text-decoration:underline}
+.muted{margin:0 0 14px;color:var(--muted)}
+.social-links{margin-top:14px;display:flex;gap:10px;align-items:center;color:var(--muted)}
+.social-links a{color:var(--accent);text-decoration:none}
+.social-links a:hover{text-decoration:underline}
+.primary{background:var(--accent)!important;color:#111!important}

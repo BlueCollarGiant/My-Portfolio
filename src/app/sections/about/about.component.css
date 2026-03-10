@@ -1,5 +1,7 @@
 .kv{display:grid;grid-template-columns:1fr;gap:16px}
 @media (min-width:900px){.kv{grid-template-columns:1fr 1fr}}
 .panel{background:rgba(0,0,0,.25);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.panel p+p{margin-top:12px}
+.links{margin-top:14px}
 .links a{color:var(--accent);text-decoration:none}
 .links a:hover{text-decoration:underline}

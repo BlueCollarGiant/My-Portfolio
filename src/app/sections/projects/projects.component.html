@@ -3,7 +3,10 @@
   <div class="grid projects">
     @for (p of projectsSvc.projects(); track p.title) {
       <article class="card">
-        <h3 class="title">{{ p.title }}</h3>
+        <div class="card-top">
+          <h3 class="title">{{ p.title }}</h3>
+          <span class="role-badge">{{ p.role }}</span>
+        </div>
         <p class="blurb">{{ p.blurb }}</p>
         <div class="tags">
           @for (t of p.tech; track t) {
