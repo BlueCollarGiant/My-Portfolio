@@ -1,5 +1,43 @@
-.muted{margin:0 0 14px;color:var(--muted)}
-.social-links{margin-top:14px;display:flex;gap:10px;align-items:center;color:var(--muted)}
-.social-links a{color:var(--accent);text-decoration:none}
-.social-links a:hover{text-decoration:underline}
-.primary{background:var(--accent)!important;color:#111!important}
+﻿.contact-section {
+  padding: clamp(30px, 6.4vw, 82px) 0;
+}
+
+.contact-shell {
+  padding: clamp(24px, 3.6vw, 42px);
+  text-align: left;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(560px 260px at 50% -10%, rgba(200, 168, 109, 0.18), transparent 72%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.36));
+}
+
+.contact-actions {
+  margin-top: var(--space-6);
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.contact-actions .btn {
+  min-width: 190px;
+}
+
+.contact-links {
+  margin-top: var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.contact-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.contact-links a:hover,
+.contact-links a:focus-visible {
+  color: var(--accent);
+}

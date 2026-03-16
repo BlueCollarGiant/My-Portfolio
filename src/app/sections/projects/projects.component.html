@@ -1,43 +1,75 @@
-<section id="projects" class="container">
-  <h2 class="section-title">Featured Projects</h2>
-  <div class="grid projects">
-    @for (p of projectsSvc.projects(); track p.title) {
-      <article class="card">
-        <div class="card-top">
-          <h3 class="title">{{ p.title }}</h3>
-          <span class="role-badge">{{ p.role }}</span>
-        </div>
-        <p class="blurb">{{ p.blurb }}</p>
-        <div class="tags">
-          @for (t of p.tech; track t) {
-            <span class="tag">{{ t }}</span>
-          }
-        </div>
-        @if (p.title !== 'Future Project — Coming Soon') {
-          <div class="go">
-            @if (p.liveUrl && p.repoUrl) {
-              <a class="btn" [href]="p.liveUrl" target="_blank" rel="noopener noreferrer"
-                 aria-label="Open {{ p.title }} live site">
+﻿<section id="projects" class="projects-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-kicker">Featured Work</span>
+      <h2 class="section-title">Project Execution, Not Just Project Screenshots.</h2>
+      <p class="section-lead">
+        Each build below reflects how I approach real constraints: architecture decisions, delivery
+        trade-offs, and product value. The focus is practical full-stack execution with clean UX.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      @for (p of projectsSvc.projects(); track p.title; let i = $index) {
+        <article class="project-card surface reveal" [class.delay-1]="i === 1" [class.delay-2]="i === 2">
+          <header class="project-header">
+            <div>
+              <p class="project-index">Project {{ i + 1 }}</p>
+              <h3 class="project-title">{{ p.title }}</h3>
+            </div>
+            <span class="project-role">{{ p.role }}</span>
+          </header>
+
+          <p class="project-summary">{{ p.summary }}</p>
+
+          <dl class="project-details">
+            <div>
+              <dt>Challenge</dt>
+              <dd>{{ p.challenge }}</dd>
+            </div>
+            <div>
+              <dt>Architecture</dt>
+              <dd>{{ p.architecture }}</dd>
+            </div>
+            <div>
+              <dt>Value</dt>
+              <dd>{{ p.value }}</dd>
+            </div>
+          </dl>
+
+          <div class="project-tech" aria-label="Technology stack">
+            @for (t of p.tech; track t) {
+              <span class="chip">{{ t }}</span>
+            }
+          </div>
+
+          <div class="project-actions">
+            @if (p.liveUrl) {
+              <a
+                class="btn btn-primary"
+                [href]="p.liveUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open {{ p.title }} live site"
+              >
                 Open Live
               </a>
-              <a class="btn" [href]="p.repoUrl" target="_blank" rel="noopener noreferrer"
-                 aria-label="Open {{ p.title }} repository">
-                View Repo
-              </a>
-            } @else if (p.liveUrl) {
-              <a class="btn" [href]="p.liveUrl" target="_blank" rel="noopener noreferrer"
-                 aria-label="Open {{ p.title }} live site">
-                Open Live
-              </a>
-            } @else if (p.repoUrl) {
-              <a class="btn" [href]="p.repoUrl" target="_blank" rel="noopener noreferrer"
-                 aria-label="Open {{ p.title }} repository">
-                View Repo
+            }
+
+            @if (p.repoUrl) {
+              <a
+                class="btn btn-ghost"
+                [href]="p.repoUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open {{ p.title }} repository"
+              >
+                View Code
               </a>
             }
           </div>
-        }
-      </article>
-    }
+        </article>
+      }
+    </div>
   </div>
 </section>
