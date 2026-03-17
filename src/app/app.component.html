@@ -1,21 +1,29 @@
-<header class="site-header">
-  <div class="container hdr">
-    <div class="name">Isaiah Ratliff</div>
-    <nav class="nav">
+﻿<header class="site-header">
+  <div class="container header-shell">
+    <a class="brand" href="#top" aria-label="Go to top">
+      <span class="brand-mark" aria-hidden="true">IR</span>
+      <span class="brand-text">Isaiah Ratliff</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
+      <a href="#building">Building</a>
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<app-hero></app-hero>
-<app-projects></app-projects>
-<app-about></app-about>
-<app-resume></app-resume>
-<app-contact></app-contact>
+<main id="top" class="page-shell">
+  <app-hero></app-hero>
+  <app-about></app-about>
+  <app-projects></app-projects>
+  <app-currently-building></app-currently-building>
+  <app-resume></app-resume>
+  <app-contact></app-contact>
+</main>
 
 <footer class="footer">
-  © {{year}} BlueCollarGiant.
+  <p>&copy; {{ year }} Isaiah Ratliff. Built with Angular.</p>
 </footer>
